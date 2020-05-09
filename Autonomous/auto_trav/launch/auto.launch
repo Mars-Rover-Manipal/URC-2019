@@ -1,0 +1,14 @@
+<launch>
+	<include file="$(find realsense2_camera)/launch/rs_camera.launch">
+		<arg name="filters" value="pointcloud"/>
+	</include>
+	
+	<node pkg="auto_trav" type="gps.py" name="gps"/>
+	<node pkg="auto_trav" type="imu.py" name="imu"/>
+	<node pkg="auto_trav" type="sub.py" name="ball" />
+	<node pkg="auto_trav" type="image_pub.py" name="image" />
+	<node pkg="auto_trav" type="obs_av" name="obstacle" />
+	<node pkg="auto_trav" type="rover_hey.py" name="rover" output="screen"/>
+		
+	
+</launch>

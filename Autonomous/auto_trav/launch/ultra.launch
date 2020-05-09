@@ -1,0 +1,14 @@
+<launch>
+	<include file="$(find realsense2_camera)/launch/rs_rgbd.launch" >
+		<arg name="filters" value="colorizer"/>
+		<arg name="enable_infra1" value="false" />
+		<arg name="enable_infra2" value="false" />
+	</include>
+	<node pkg="auto_trav" type="gps.py" name="gps"/>
+	<node pkg="auto_trav" type="imu.py" name="imu"/>
+	<node pkg="auto_trav" type="sub.py" name="sub"/>
+	<node pkg="auto_trav" type="image_pub.py" name="image_pub"/>
+	<node pkg="auto_trav" type="image.py" name="Image"/>
+	<node pkg="auto_trav" type="depth.py" name="intel" />
+	<node pkg="auto_trav" type="rover.py" name="rover" output="screen"/>	
+</launch>

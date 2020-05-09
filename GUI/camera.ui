@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>1</y>
+      <width>1371</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="App" name="mast_camera" native="true"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="axis_1" name="axis_1" native="true"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="motor_Code" name="motorcode" native="true"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="axis_2" name="axis_2" native="true"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="axis_3" name="axis_3" native="true"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="axis_4" name="axis_4" native="true"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>App</class>
+   <extends>QWidget</extends>
+   <header>cam8.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>axis_1</class>
+   <extends>QWidget</extends>
+   <header>axis_1.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>axis_2</class>
+   <extends>QWidget</extends>
+   <header>axis_2.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>axis_3</class>
+   <extends>QWidget</extends>
+   <header>axis_3.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>axis_4</class>
+   <extends>QWidget</extends>
+   <header>axis_4.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>motor_Code</class>
+   <extends>QWidget</extends>
+   <header>tcp_send.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

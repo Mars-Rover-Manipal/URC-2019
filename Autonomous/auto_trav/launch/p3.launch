@@ -1,0 +1,10 @@
+<launch>
+	<include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+	<node pkg="auto_trav" type="gps.py" name="gps"/>
+	<node pkg="auto_trav" type="imu.py" name="imu"/>
+	<node pkg="auto_trav" type="sub.py" name="ball" />
+	<node pkg="auto_trav" type="image.py" name="distance" />
+	<node pkg="auto_trav" type="image_pub.py" name="image" />
+	<node pkg="auto_trav" type="p3.py" name="intel" />
+	<node pkg="auto_trav" type="rover_hey.py" name="rover" output="screen"/>	
+</launch>
